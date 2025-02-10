@@ -132,26 +132,18 @@
   color: #22253b;
 }
 
-/* 🔹 Адаптивность */
-@media (max-width: 1024px) {
+/*  Адаптивность */
+@media (max-width: 1200px) {
   .footer {
-    padding: 30px 15px;
   }
 
   .footer-row {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .footer-column {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
   }
 
   .footer-links-contact {
-    justify-content: center;
-    gap: 20px;
   }
 
   .footer-bottom {
