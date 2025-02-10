@@ -1,61 +1,17 @@
-/* Контейнер для всего компонента */
+.map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  margin: 40px 0;
-  padding: 0 15px; /* Отступы для мобильных */
-  width: 100%;
+  max-width: 1200px !important;
+  height: 400px !important;
+  margin: 0 auto;
 }
 
-/* Картографический контейнер */
-.map-container__map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1160px; /* Максимальная ширина карты */
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Стиль для iframe карты */
-.map-container__map iframe {
-  border: none;
-  width: 100%;
-  height: 423px;
-  max-width: 1160px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/*  Адаптивность */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .map {
+  }
   .map-container {
-    padding: 0 10px;
-  }
-
-  .map-container__map {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .map-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .map-container__map iframe {
-    height: 350px; /* Уменьшаем высоту на планшетах */
-  }
-}
-
-@media (max-width: 480px) {
-  .map-container {
-  }
-
-  .map-container__map iframe {
   }
 }
