@@ -1,0 +1,197 @@
+.banner {
+  width: 1160px;
+  height: 481px;
+  margin: 0 auto;
+}
+
+.banner-slide {
+  min-height: 600px;
+  background-image: url("/img/bg.png"); /* Фоновое изображение, которое не меняется */
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+.banner-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.yellow-quote {
+  color: #f15525; /* Оранжевый цвет */
+}
+
+.programming-text {
+  color: #000000;
+  font-weight: bold;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+  max-width: 70%;
+  font-size: 46px;
+  line-height: 46px;
+}
+
+.text-content h1 {
+  max-width: 638px;
+  max-height: 185px;
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: 500;
+}
+
+.title-line {
+  border: none; /* Убираем стандартные стили */
+  border-top: 2px solid #dedede; /* Оранжевая линия */
+  max-width: 365px; /* Линия займет всю ширину родительского элемента */
+  margin-top: 10px; /* Отступ сверху */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.text-content p {
+  width: 365px;
+  height: 46px;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+.text-content p::before {
+  content: "Закажите звонок, и наш специалист свяжется с вами в ближайшее время";
+  display: none;
+}
+
+.text-content button {
+  width: 265px;
+  height: 70px;
+  border-radius: 50px;
+}
+
+.swiper-button-prev {
+  width: 37px;
+  height: 37px;
+  background-color: #f15525;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-button-next {
+  width: 37px;
+  height: 37px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50px;
+}
+
+.swiper-button-next::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #f15525;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #38bff2;
+}
+
+.image-content {
+  max-width: 45%;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    max-width: 300px;
+  }
+  .banner-slide {
+  }
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .text-content {
+    max-width: 288px;
+    max-height: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-content h1 {
+    font-size: 24px !important;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* .text-content p::before {
+    content: "Пройдите тестирование, чтобы получить доступ к бесплатным вводным урокам";
+    display: block;
+  } */
+  .text-content p {
+    max-width: 270px !important;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px !important;
+    text-align: center;
+  }
+
+  .image-content {
+  }
+  .contact-button {
+    max-width: 265px;
+    max-height: 70px;
+    padding: 20px 20px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

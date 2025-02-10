@@ -1,0 +1,99 @@
+.features {
+  margin-top: 120px !important;
+}
+
+.features h2 {
+  margin-bottom: 80px !important;
+  max-width: 598px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 48px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #eaf2f5;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-icon {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  line-height: 18px;
+  color: #22253b;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  line-height: 15px;
+  color: #22253b;
+  cursor: pointer;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .features h2 {
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 300px;
+    height: auto; /* Убираем фиксированную высоту */
+    margin-bottom: 40px !important; /* Уменьшаем отступ */
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .feature-card {
+    width: 100%; /* Занимает всю доступную ширину */
+    height: auto; /* Убираем фиксированную высоту */
+    padding: 1rem; /* Уменьшаем отступы внутри карточки */
+    min-width: unset; /* Убираем минимальную ширину */
+    max-width: unset; /* Убираем максимальную ширину */
+  }
+
+  .feature-card h3 {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  /* Последняя карточка занимает всю ширину, если количество нечетное */
+  .feature-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}
