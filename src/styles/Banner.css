@@ -140,7 +140,7 @@
 
 @media (max-width: 768px) {
   .banner {
-    max-width: 300px;
+    max-width: 100%;
   }
   .banner-slide {
   }
@@ -190,6 +190,9 @@
 }
 
 @media (max-width: 1200px) {
+  .banner {
+    max-width: 100%;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
